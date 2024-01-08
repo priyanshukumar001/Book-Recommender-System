@@ -3,6 +3,7 @@
 * {
     box-sizing: border-box;
     outline: none;
+
 }
 
 body,
@@ -42,6 +43,7 @@ h1 {
     border-radius: 0 0 2em 2em;
     color: rgb(238, 180, 4);
     background-image: url('../img/63.jpg');
+
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -122,8 +124,6 @@ input:hover,
 
     /* max-width: 600px; */
 }
-
-
 
 .feed-box > h4 {
     color: rgb(253, 248, 242);
@@ -231,6 +231,7 @@ input:hover,
 
 
 
+
     /* body,
     html {
         animation-name: back_img;
@@ -281,6 +282,7 @@ input:hover,
     .feed-bottom {
         display: flex;
         /* max-width: 500px; */
+
     }
 
     .feed-img {
@@ -294,7 +296,9 @@ input:hover,
     }
 
     .search_box {
+
         width: 50vw;
+
     }
 
 
