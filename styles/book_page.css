@@ -2,6 +2,8 @@
 
 * {
     box-sizing: border-box;
+    outline: none;
+
 }
 
 body,
@@ -40,7 +42,8 @@ h1 {
     padding: 0px;
     border-radius: 0 0 2em 2em;
     color: rgb(238, 180, 4);
-    background-image: url('img/63.jpg');
+    background-image: url('../img/63.jpg');
+
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -100,13 +103,14 @@ input:hover,
 
 .feed {
     width: 100%;
-    margin: 1em auto;
+    /* margin: 1em; */
     margin-bottom: 10rem;
-    /* border: 2px solid rgb(247, 198, 51); */
+    /* border: 2px solid black; */
     border-radius: 1rem;
+    display: inline-block;
     /* padding: 1em; */
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
     /* display: flex-box; */
     /* justify-content: space-evenly; */
 
@@ -114,9 +118,11 @@ input:hover,
 
 .feed-box {
     background-color: rgba(203, 137, 6, 0.5);
-    margin: .2em;
+    margin: auto;
+    margin-top: .5em;
     border-radius: .9em;
 
+    /* max-width: 600px; */
 }
 
 .feed-box > h4 {
@@ -219,9 +225,10 @@ input:hover,
 
     }
 
-    .feed {
-        width: 60%;
-    }
+    /* .feed {
+        width: 100%;
+    } */
+
 
 
 
@@ -255,8 +262,27 @@ input:hover,
 
 /*for feed */
 @media screen and (min-width: 500px) {
+    .feed-box {
+        width: 40vw;
+        min-width: 460px;
+    }
+
+    .feed div.feed-box:nth-child(odd) {
+        float: left;
+        clear: both;
+        margin-left: 1em;
+    }
+
+    .feed div.feed-box:nth-child(even) {
+        float: right;
+        clear: both;
+        margin-right: 1em;
+    }
+
     .feed-bottom {
         display: flex;
+        /* max-width: 500px; */
+
     }
 
     .feed-img {
@@ -270,7 +296,9 @@ input:hover,
     }
 
     .search_box {
-        width: 80%;
+
+        width: 50vw;
+
     }
 
 
