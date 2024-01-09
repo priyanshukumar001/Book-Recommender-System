@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="../styles/book_page.css" />
 
         <title>Recommendation App</title>
+
         <!-- <style>
        
     </style> -->
@@ -20,38 +21,13 @@
             <div class="head">
                 <h1>Book Recommendation App</h1>
             </div>
-            <div class="search_box">
-                <form method="post" action="/" id="form">
-                    <label for="book">Type or select a book from the
-                        dropdown:</label>
-                    <select name="title" id="book">
-                        {% for option in books_list %}
-                        <option value="{{ option }}">{{ option }}</option>
-                        <!-- <option value="sample">Select Genre</option> -->
-                        {% endfor %}
-                    </select>
-                    <label for="num">Select Number of books:</label>
-                    <div class="sel">
-                        <select name="count" id="book_num">
-                            <option value="default">Select number of
-                                books</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select></div>
-                    <button>Show me Recommendations</button>
-                </form>
-            </div>
-            <!-- <div class="final_result">
+
+            <div class="final_result">
                 <p><b>Title:</b> {{title}}</p>
+                <!-- <p><b>Title:</b> Harry Porter</p> -->
                 <p><b>Number of Book: </b>{{count}}</p>
+                <!-- <p><b>Number of Book:</b>3</p> -->
+
                 <p><b>Books:</b></p>
 
                 <p id="book_result">{{ recommendations }}</p>
@@ -60,17 +36,17 @@
                     let result=document.getElementById('book_result');
                     let book_list=result.textContent;
                     result.innerHTML="";
-                    
+                    console.log(book_list)
                     book_list=book_list.slice(1,-1);
-                    
+                    console.log(book_list)
                     book_list=book_list.split(',')
-                   
+                    console.log(book_list);
                     for(let i=0; i<book_list.length; i++)
                     {
                     result.innerHTML+=`${i+1}). `+book_list[i]+'<br>';
                         }
                 </script>
-            </div> -->
+            </div>
             <div class="feed">
                 <div class="feed-box">
                     <h4>Today's Favourite &RightArrowBar;</h4>
@@ -134,25 +110,25 @@
             <!-- <../img src="../img" alt="1"><../img src="../img/2.jpg" alt="2"><../img src="../img/3.jpg" alt="3"><../img src="../img/4.jpg" alt="4"><../img src="../img/5.jpg" alt="5"><../img src="../img/6.jpg" alt="6"><../img src="../img/7.jpg" alt="7"><../img src="../img/8.jpg" alt="8"><../img src="../img/9.jpg" alt="9"><../img src="../img/10.jpg" alt="10"> -->
             <span
                 class="book sliding_effect"
-                style="background-image: url('../img');"></span>
+                style="background-image: url('../img')"></span>
             <span
                 class="book sliding_effect"
-                style="background-image: url('../img/2.jpg');"></span>
+                style="background-image: url('../img/2.jpg')"></span>
             <span
                 class="book sliding_effect"
-                style="background-image: url('../img/3.jpg');">
+                style="background-image: url('../img/3.jpg')">
             </span><span
                 class="book sliding_effect"
-                style="background-image: url('../img/4.jpg');">
+                style="background-image: url('../img/4.jpg')">
             </span><span
                 class="book sliding_effect"
-                style="background-image: url('../img/5.jpg');">
+                style="background-image: url('../img/5.jpg')">
             </span><span
                 class="book sliding_effect"
-                style="background-image: url('../img/6.jpg');">
+                style="background-image: url('../img/6.jpg')">
             </span><span
                 class="book sliding_effect"
-                style="background-image: url('../img/7.jpg');"></span>
+                style="background-image: url('../img/7.jpg')"></span>
             <span
                 class="book sliding_effect"
                 style="background-image: url('../img/8.jpg')"></span>
@@ -185,18 +161,7 @@
         </div>
 
         <!--inserting script for displaying result-->
-        <script>
-            window.onload=function(){
-
-            let form=document.getElementById('form');
-            form.addEventListener('submit',function(eve){
-            let search_box=document.getElementsByClassName('search_box');
-            search_box[0].style.display='none';
-            let result=document.getElementsByClassName('final_result');
-                result[0].style.display='block';
-                // eve.preventDefault();
-            });}
-        </script>
+        <!-- <script src="./book.js" async></script> -->
     </body>
 </html>
 
